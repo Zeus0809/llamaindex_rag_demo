@@ -209,3 +209,4 @@ __marimo__/
 demoenv/
 .DS_Store
 data/
+embed_model/

@@ -7,8 +7,11 @@ load_dotenv()
 OPENAI_API_KEY = os.getenv('OPENAI_API_KEY')
 
 documents = SimpleDirectoryReader("data").load_data()
+print("Document loaded!")
 index = VectorStoreIndex.from_documents(documents)
+print("Index created!")
 query_engine = index.as_query_engine()
-response = query_engine.query("When did Illia graduate college?")
-print(response)
+print("Query engine created!")
+response = query_engine.query("Who is Illia?")
+print("\nLLM response: ", response)
 
